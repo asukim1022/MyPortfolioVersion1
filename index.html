@@ -1,171 +1,730 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!doctype html>
 <html xmlns="http://www.w3.org/1999/xhtml">
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<link rel="stylesheet" type="text/css" href="css/style.css" />
-		<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
-		<script src="js/jquery-ui.min.js"></script>
-		<script src="js/common.js"></script>
-		<title>Kimsuji</title>
-	</head>
-	<body>
-		<div class="box">
-			<header>
-				<h1>SUJI</h1>
-				<nav>
-					<ul>
-	            		<li id="a1"><a>Introduction</a></li>
-	            		<li><a>Gallery</a></li>
-			            <li><a>Capability</a></li>
-			            <li><a>Account</a></li>
-	        		    <li><a>Portfolio</a></li>
-			            <li><a>Contact</a></li> 
-	        		 </ul>
-				</nav>
-			</header>
-		</div>
-    
-		<section class="main">
-			<div class="main_wrap">
-				<div>
-	        		<h1 class="logo">KIMSUJI</h1>
-	            	<p>"The real effort never betrays me"</p>
-	            	<span><a id="more">more</a></span>
-	            </div>
-	        </div>
-	    </section>
-    
-	    <section class="introduction">
-	    	<div>
-	    		<h1 id="intro">Introduction</h1>
-	        	<img id="intro_img" src="images/me.png" width="338" height="338" alt="" />
-	    		<p id="intro_txt">안녕하세요 저는 <strong>김수지</strong> 입니다. 저의 포트폴리오 사이트에 방문해주셔서감사합니다. 저는 프로그래밍을 전공하고 있습니다. 프로그래밍을 좋아하고 관심이 많아 많이 배우고 싶습니다. 프로그래밍이 힘든 만큼 노력으로 채우겠습니다. 저의 포트폴리오를 자세히 봐주세요.
-	        	</p>
-	        </div>
-		</section>
-    
-	    <section class="gallery">
-	    	<div>
-	    		<h1 id="gallery">Gallery</h1>
-	        	<ul id="gallery_ul">
-	        		<li><img class="a1" src="images/a1.jpg" alt="listimg1" title="listimg1" width="360" height="260" /></li>
-		            <li><img class="a2" src="images/a2.jpg" alt="listimg2" title="listimg2" width="360" height="260" /></li>
-	    	        <li><img class="a3" src="images/a3.jpg" alt="listimg3" title="listimg3" width="360" height="260" /></li>
-	        	    <li><img class="a4" src="images/a4.jpg" alt="listimg4" title="listimg4" width="360" height="260" /></li>
-	            	<li><img class="a5" src="images/a5.png" alt="listimg5" title="listimg5" width="360" height="260" /></li>
-		            <li><img class="a6" src="images/a6.jpg" alt="listimg6" title="listimg6" width="360" height="260" /></li>
-	    	    </ul>
-	        </div>
-	    </section>
+    <head>
+        <title>김수지</title>
+        <link rel="stylesheet" type="text/css" href="styles.css" />
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+        <script type="text/javascript" src="js/common.js"></script>
+    </head>
 
-		<section class="capability">
-			<div class="menu4">
-				<div class="menu_d">
-					<div class="txt">
-						<h2 id="capability_cilck">Capability</h2>
-						<p>학교에서 기획, 디자인, 개발 수업을 들었고 그중 프로그래밍을 전공으로 선택했습니다. 제가 생각하는 저의 능력도 입니다. 마우스를 올려주세요!</p>
-					</div>
-					<div class="box1">
-						<ul class="as">
-	 						<li class="acc1">60%</li>
-							<li class="acc2">50%</li>
-							<li class="acc3">30%</li>
-							<li class="acc4">50%</li>
-							<li class="acc5">20%</li>
-							<li>html/css</li>
-							<li>java</li>
-							<li>javascript</li>
-							<li>design</li>
-							<li>plan</li>
-						</ul>                
-					</div>
-				</div>
-			</div>
-	    </section>
-	    
-	    <section class="account">
-	    	<div class="account_wrap">
-	        	<ul>
-	            	<li class="account_img1"><a href="http://www.naver.com/"><img src="images/icon1.png" width="100" height="100" alt="icon1" title="icon1"/></a></li>
-	                <li class="account_txt1">NAVER</li>
-	                <li>rlatnwl2880@naver.com</li>
-	            </ul>
-	            <ul>
-	            	<li><a href="www.google.co.kr/"><img src="images/icon3.png" width="100" height="100" alt="icon2" title="icon2"/></a></li>
-	                <li class="account_txt2">google</li>
-	                <li>rlatnwl5517@gmail.com</li>
-	            </ul>
-	            <ul>
-	            	<li><a href="www.facebook.com"><img src="images/icon2.png" width="100" height="100" alt="icon3" title="icon3" /></a></li>
-	                <li class="account_txt3">facebook</li>
-	                <li>rlatnwl2880@facebook.com</li>
-	            </ul>
-			</div>
-	    </section>
-    
-	    <div class="prtfolio">
-			<h2 class="portfolio_txt">Portfolio</h2>
-			<p>기획과 디자인을 제외한 코딩 작업 위주로 정리했습니다. 클릭시에 Portfolio을 볼수있습니다.</p>
-	    	<div class="wrap_wrap">   
-				<div class="itemViewLeft">
-					<div class="itemBig">
-						<div>
-							<a href="port/portA/index.html"><img src="images/11.jpg" alt="" /></a>
-						</div>
-						<div>
-							<a href="port/portB/index.html"><img src="images/22.jpg" alt="" /></a>
-						</div>
-						<div>
-							<a href="port/portC/index.html"><img src="images/33.jpg" alt="" /></a>
-						</div>
-						<div>
-							<a class="prtfolio4"><img src="images/44.jpg" alt="" /></a>
-						</div>
-					</div>
-					<div class="rollingBox itemList">
-						<div class="wrapBox">
-							<ul>
-								<li class="on"><a href="#none"><img src="images/11.jpg" alt="" width="111" height="111" /></a></li>
-								<li><a href="#none"><img src="images/22.jpg" alt=""  width="111" height="111" /></a></li>
-								<li><a href="#none"><img src="images/33.jpg" alt=""  width="111" height="111" /></a></li>
-								<li><a href="#none"><img src="images/44.jpg" alt=""  width="111" height="111" /></a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-	        </div>
-		</div>
-    
-	    <div class="contact" id="contact">
-			<div class="page6_wrap7">
-				<div class="contact">
-					<div class="contact_wrap">
-						<h2 class="contact_txt">Contact us!</h2>
-							<form action="form.php" method="get" class="form">
-								<fieldset>
-									<legend>visitor</legend>
-										<p class="name">
-											<label for="name">Your Email </label>
-											<input type="text" id="name"  value="Full Name"/>
-	                                                						<input type="text" id="userEmail"value="Email Address" title="이메일 아이디 입력"/>
-	                                            						</p>
-	                                            						<p>
-	                                                						<label for="userEmail">Your Name </label>
-	                                            						</p>
-	                                            						<p>			
-	                                                						<label for="meno">Your Message </label>
-	                                                						<br />
-	                                                					<textarea cols="200" rows="20" id="meno" name="meno">Your Message
-	                                                					</textarea>
-	                                            						</p>
-	                                            						<p class="btn">
-	                                                						<button type="submit" id="OK" value="보내기">SEND</button>							
-	                                            						</p>
-	                                    					</fieldset>
-	                    						</form>
-					</div>
-				</div>
-			</div>
-		</div>
-</body>
-</html>
+
+    <body>
+        <div class="slideSelectors">
+            <div class="item selected menu_click1">1</div>
+            <div class="item menu_click2">2</div>
+            <div class="item menu_click3">3</div>
+            <div class="item menu_click4">4</div>
+            <div class="item menu_click5">5</div>
+            <div class="item menu_click6">6</div>
+            <div class="item menu_click7">7</div>
+        </div>
+
+        <div id="container_div3">
+            <div id="content_div3" class="draggable_div2">
+                
+                <div id="child1_1">
+                    <div class="line_d"></div>
+                    <div class="item item0">
+                        <div class="inner">
+                            <div class="wrapper">
+                                <div class="content">
+                                    <h1 class="text0">기능</h1>
+                                    <div class="content_div_d">
+                                        <ul class="port_div" id="port_d">
+                                            <li class="d_con1 con_div">
+                                                <a href="pdf/d_po7.pdf" class="d_click1" target="_blank">
+                                                    <img class="dot_bot_d" src="images/dot.png" alt="img" title="img" />
+                                                    <img class="ssd menu_over ssd9" src="images/ssd.png" alt="img" title="img" />
+                                                    <div class="dot_hover">
+                                                        <img class="project" src="images/a1.png" alt="img" title="img">
+                                                        <h3>LookMi</h3>
+                                                        <p>팀과 함께 거울디바이스의<br/>앱, 사이트 디자인을<br/>제작</p>
+                                                    </div>                                                
+                                                </a>
+                                            </li>
+                                            
+                                            <li class="d_con2 con_div">
+                                                <a href="pdf/d_po3.pdf" class="d_click2" target="_blank">
+                                                    <div class="dot_hover">
+                                                        <h3>라면</h3>
+                                                        <p>'건강하게 라면먹기'라는<br/>주제로 일러스트를 이용해<br/>스토리북을 제작</p>
+                                                        <img class="project" src="images/c3.png" alt="img" title="img">
+                                                    </div>   
+                                                    <img class="ssda menu_over ssda7" src="images/ssda.png" alt="img" title="img">
+                                                    <img class="dot_top_d" src="images/dot.png" alt="img" title="img">
+                                                </a>
+                                            </li>
+                                            
+                                            <li class="d_con3 con_div">
+                                                <a href="pdf/d_po2.pdf" class="d_click3" target="_blank">
+                                                    <img class="dot_bot_d" src="images/dot.png" alt="img" title="img">
+                                                    <img class="ssd menu_over ssd10" src="images/ssd.png" alt="img" title="img">
+                                                    <div class="dot_hover">
+                                                        <img class="project" src="images/c2.png" alt="img" title="img">
+                                                        <h3>pizza poster</h3>
+                                                    <p>피자라는 주제로<br/>일러스트를 이용하여<br/>포스터를 제작함</p>
+                                                    </div>    
+                                                </a>                                            
+                                            </li>
+                                            
+                                            <li class="d_con4 con_div">
+                                                <a href="https://youtu.be/N0FuFvL0lvY" class="d_click4" target="_blank">
+                                                    <div class="dot_hover">
+                                                        <h3>3D-kimsuji</h3>
+                                                        <p>3D을 이용하여<br/>자신의 이름을 소개하는<br/>간단한 영상을 제작</p>
+                                                        <img class="project" src="images/c4.png" alt="img" title="img">
+                                                    </div> 
+                                                    <img class="ssda menu_over ssda8" src="images/ssda.png" alt="img" title="img">
+                                                    <img class="dot_top_d" src="images/dot.png" alt="img" title="img">
+                                                </a>
+                                            </li>
+                                            
+                                            <li class="d_con5 con_div">
+                                                <a href="pdf/d_po5.pdf" class="d_click5" target="_blank">
+                                                    <img class="dot_bot_d" src="images/dot.png" alt="img" title="img">
+                                                    <img class="ssd menu_over ssd11" src="images/ssd.png" alt="img" title="img">
+                                                    <div class="dot_hover">
+                                                        <img class="project" src="images/c5.png" alt="img" title="img">
+                                                        <h3>커피스미스 ucc</h3>
+                                                        <p>커피스미스에서 주체로하는<br/>공모전에 참가하여<br/>우수상을 수상함</p>
+                                                    </div>      
+                                                </a>                                          
+                                            </li>
+                                            
+                                            <li class="d_con6 con_div">
+                                                <a href="https://youtu.be/Yd9u-HkJgTg" class="d_click6" target="_blank">
+                                                    <div class="dot_hover">
+                                                        <h3>카페베네</h3>
+                                                        <p>에펙을 이용하여<br/>카페베네 신메뉴를 소개하는<br/>영상을 제작</p>
+                                                        <img class="project" src="images/c6.png" alt="img" title="img">
+                                                    </div> 
+                                                    <img class="ssda menu_over ssda2" src="images/ssda.png" alt="img" title="img">
+                                                    <img class="dot_top_d" src="images/dot.png" alt="img" title="img">
+                                                </a>
+                                            </li>                                    
+                                            
+                                            <li class="d_con7 con_div">
+                                                <a href="pdf/d_po1.pdf" class="d_click7" target="_blank">
+                                                    <img class="dot_bot_d" src="images/dot.png" alt="img" title="img">
+                                                    <img class="ssd menu_over ssd12" src="images/ssd.png" alt="img" title="img">
+                                                    <div class="dot_hover">
+                                                        <img class="project" src="images/c1.png" alt="img" title="img">
+                                                        <h3>2eyes branding</h3>
+                                                        <p>걸그룹 2eyes를<br/>새로운 컵셉으로<br/>브랜딩을 함</p>
+                                                    </div>     
+                                                </a>                                           
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="child1_2">
+					<!-- javascript/jquery 페이지 -->
+                    <div class="line_a"></div>
+                    <div class="item item1">
+                        <div class="inner">
+                            <div class="wrapper">
+                                <div class="content">
+                                    <h1 class="text1">javascript/jquery</h1>
+                                    <div class="content_div_a">
+                                    <ul class="port_div" id="port_a">
+                                        <li class="a_con1 con_div">
+                                            <a href="http://kimsuji.dothome.co.kr/" class="a_click1" target="_blank">
+                                                <img class="dot_bot_a" src="images/dot.png" alt="img" title="img">
+                                                <img class="ssd menu_over ssd1" src="images/ssd.png" alt="img" title="img">
+                                                <div class="dot_hover">
+                                                    <img class="project" src="images/a6.png" alt="img" title="img">
+                                                    <h3>reference site</h3>
+                                                    <p>자바스크립트나<br/> 터치이벤트의 <br/> 레퍼런스 사이트를 제작</p>
+                                                </div>                                                
+                                            </a>
+                                        </li>
+                                        
+                                        <li class="a_con2 con_div">
+                                            <a href="sub/html_po2/index.html" class="a_click2" target="_blank">
+                                                <div class="dot_hover">
+                                                    <h3>Portfolio Site</h3>
+                                                    <p>기본적인 제이쿼리로<br/>간단한 포트폴리오<br/>홈페이지를 제작</p>
+                                                    <img class="project" src="images/a2.png" alt="img" title="img">
+                                                </div>   
+                                                <img class="ssda menu_over ssda1" src="images/ssda.png" alt="img" title="img">
+                                                <img class="dot_top_a" src="images/dot.png" alt="img" title="img">
+                                            </a>
+                                        </li>
+                                        
+                                        <li class="a_con3 con_div">
+                                            <a href="sub/html_po3/index.html" class="a_click3" target="_blank">
+                                                <img class="dot_bot_a" src="images/dot.png" alt="img" title="img">
+                                                <img class="ssd menu_over ssd2" src="images/ssd.png" alt="img" title="img">
+                                                <div class="dot_hover">
+                                                    <img class="project" src="images/a3.png" alt="img" title="img">
+                                                    <h3>spiderman</h3>
+                                                    <p>스파이더맨을 주제로<br/>api을 이용하여<br/>홈페이지를 제작</p>
+                                                </div>    
+                                            </a>                                            
+                                        </li>
+                                        
+                                        <li class="a_con4 con_div">
+                                            <a href="sub/html_po4/index.html" class="a_click4" target="_blank">
+                                                <div class="dot_hover">
+                                                    <h3>Dunkindonuts</h3>
+                                                    <p>던킨도넛을 주제로하여<br/>패럴랙스 홈페이지를<br/>제작</p>
+                                                    <img class="project" src="images/a4.png" alt="img" title="img">
+                                                </div> 
+                                                <img class="ssda menu_over ssda2" src="images/ssda.png" alt="img" title="img">
+                                                <img class="dot_top_a" src="images/dot.png" alt="img" title="img">
+                                            </a>
+                                        </li>
+                                        
+                                        <li class="a_con5 con_div">
+                                            <a href="sub/html_po5/index.html" class="a_click5" target="_blank">
+                                                <img class="dot_bot_a" src="images/dot.png" alt="img" title="img">
+                                                <img class="ssd menu_over ssd3" src="images/ssd.png" alt="img" title="img">
+                                                <div class="dot_hover">
+                                                    <img class="project" src="images/a8.png" alt="img" title="img">
+                                                    <h3>Portfolio Site</h3>
+                                                    <p>포트폴리오 사이크를<br/>api을 사용하지<br/>않고 제작함</p>
+                                                </div>      
+                                            </a>                                          
+                                        </li>
+                                        
+                                        <li class="a_con6 con_div">
+                                            <a href="sub/html_po6/index.html" class="a_click6" target="_blank">
+                                                <div class="dot_hover">
+                                                    <h3>waterfall</h3>
+                                                    <p>api을 사용하지 않고<br/>ajax와waterfall<br/>홈페이지를 제작</p>
+                                                    <img class="project" src="images/a7.png" alt="img" title="img">
+                                                </div> 
+                                                <img class="ssda menu_over ssda2" src="images/ssda.png" alt="img" title="img">
+                                                <img class="dot_top_a" src="images/dot.png" alt="img" title="img">
+                                            </a>
+                                        </li>
+                                        
+                                        <li class="a_con7 con_div">
+                                            <a href="sub/html_po7/index.html" class="a_click7" target="_blank">
+                                                <img class="dot_bot_a" src="images/dot.png" alt="img" title="img">
+                                                <img class="ssd menu_over ssd4" src="images/ssd.png" alt="img" title="img">
+                                                <div class="dot_hover">
+                                                    <img class="project" src="images/a5.png" alt="img" title="img">
+                                                    <h3>Smart Food Finder</h3>
+                                                    <p>냉장고에 미러디스플레이를<br/>구현하여 터치이벤트를<br/>구현</p>
+                                                </div>     
+                                            </a>                                           
+                                        </li>
+                                    </ul>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+                <div id="child1_3">
+                    <!-- html/css 페이지 -->
+                    <div class="line_b"></div>
+                    <div class="item item2">
+                        <div class="inner">
+                            <div class="wrapper">
+                                <div class="content">
+                                    <h1 class="text2">html/css</h1>
+                                    <div class="content_div_b">
+                                    <ul class="port_div" id="port_b">
+                                        <li class="b_con1 con_div">
+                                            <a href="sub/html_po1/index.html" class="b_click1" target="_blank">
+                                                <img class="dot_bot_b" src="images/dot.png" alt="img" title="img">
+                                                <img class="ssd menu_over ssd5" src="images/ssd.png" alt="img" title="img">
+                                                <div class="dot_hover">
+                                                    <img class="project" src="images/b1.png" alt="img" title="img">
+                                                    <h3>Portfolio Site</h3>
+                                                    <p>1학년 때 수업시간에 배운<br/>html/css로<br/>기초적인 홈페이지를 제작</p>
+                                                </div>                                                
+                                            </a>
+                                        </li>
+                                        
+                                        <li class="b_con2 con_div">
+                                            <a href="sub/html_po2/index.html" class="b_click2" target="_blank">
+                                                <div class="dot_hover">
+                                                    <h3>template1</h3>
+                                                    <p>디자인된 템플릿을<br/>html과 css로<br/>다시 배치하여 사이트 제작</p>
+                                                    <img class="project" src="images/b2.png" alt="img" title="img">
+                                                </div>   
+                                                <img class="ssda menu_over ssda4" src="images/ssda.png" alt="img" title="img">
+                                                <img class="dot_top_b" src="images/dot.png" alt="img" title="img">
+                                            </a>
+                                        </li>
+                                        
+                                        <li class="b_con3 con_div">
+                                            <a href="sub/html_po3/index.html" class="b_click3" target="_blank">
+                                                <img class="dot_bot_b" src="images/dot.png" alt="img" title="img">
+                                                <img class="ssd menu_over ssd6" src="images/ssd.png" alt="img" title="img">
+                                                <div class="dot_hover">
+                                                    <img class="project" src="images/b3.png" alt="img" title="img">
+                                                    <h3>template2</h3>
+                                                    <p>디자인된 템플릿을<br/>html과 css로<br/>다시 배치하여 사이트 제작</p>
+                                                </div>    
+                                            </a>                                            
+                                        </li>
+                                        
+                                        <li class="b_con4 con_div">
+                                            <a href="sub/html_po4/index.html" class="b_click4" target="_blank">
+                                                <div class="dot_hover">
+                                                    <h3>template3</h3>
+                                                    <p>디자인된 템플릿을<br/>html과 css로<br/>다시 배치하여 사이트 제작</p>
+                                                    <img class="project" src="images/b4.png" alt="img" title="img">
+                                                </div> 
+                                                <img class="ssda menu_over ssda5" src="images/ssda.png" alt="img" title="img">
+                                                <img class="dot_top_b" src="images/dot.png" alt="img" title="img">
+                                            </a>
+                                        </li>
+                                        
+                                        <li class="b_con5 con_div">
+                                            <a href="sub/html_po5/index.html" class="b_click5" target="_blank">
+                                                <img class="dot_bot_b" src="images/dot.png" alt="img" title="img">
+                                                <img class="ssd menu_over ssd7" src="images/ssd.png" alt="img" title="img">
+                                                <div class="dot_hover">
+                                                    <img class="project" src="images/b5.png" alt="img" title="img">
+                                                    <h3>template4</h3>
+                                                    <p>디자인된 템플릿을<br/>html과 css로<br/>다시 배치하여 사이트 제작</p>
+                                                </div>      
+                                            </a>                                          
+                                        </li>
+                                        
+                                        <li class="b_con6 con_div">
+                                            <a href="sub/html_po6/index.html" class="b_click6" target="_blank">
+                                                <div class="dot_hover">
+                                                    <h3>template5</h3>
+                                                    <p>디자인된 템플릿을<br/>html과 css로<br/>다시 배치하여 사이트 제작</p>
+                                                    <img class="project" src="images/b6.png" alt="img" title="img">
+                                                </div> 
+                                                <img class="ssda menu_over ssda2" src="images/ssda.png" alt="img" title="img">
+                                                <img class="dot_top_b" src="images/dot.png" alt="img" title="img">
+                                            </a>
+                                        </li>
+                                        
+                                        <li class="b_con7 con_div">
+                                            <a href="sub/html_po7/index.html" class="b_click7" target="_blank">
+                                                <img class="dot_bot_b" src="images/dot.png" alt="img" title="img">
+                                                <img class="ssd menu_over ssd8" src="images/ssd.png" alt="img" title="img">
+                                                <div class="dot_hover">
+                                                    <img class="project" src="images/b7.png" alt="img" title="img">
+                                                    <h3>template6</h3>
+                                                    <p>디자인된 템플릿을<br/>html과 css로<br/>다시 배치하여 사이트 제작</p>
+                                                </div>     
+                                            </a>                                           
+                                        </li>
+                                    </ul>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="child1_4">
+                     <!-- Desgin 페이지 -->
+                    <div class="line_c"></div>
+                    <div class="item item3">
+                        <div class="inner">
+                            <div class="wrapper">
+                                <div class="content">
+                                    <h1 class="text3">Desgin</h1>
+                                    <div class="content_div_c">
+                                        <ul class="port_div" id="port_c">
+                                            <li class="c_con1 con_div">
+                                                <a href="pdf/d_po7.pdf" class="c_click1" target="_blank">
+                                                    <img class="dot_bot_c" src="images/dot.png" alt="img" title="img">
+                                                    <img class="ssd menu_over ssd9" src="images/ssd.png" alt="img" title="img">
+                                                    <div class="dot_hover">
+                                                        <img class="project" src="images/a1.png" alt="img" title="img">
+                                                        <h3>LookMi</h3>
+                                                        <p>팀과 함께 거울디바이스의<br/>앱, 사이트 디자인을<br/>제작</p>
+                                                    </div>                                                
+                                                </a>
+                                            </li>
+                                            
+                                            <li class="c_con2 con_div">
+                                                <a href="pdf/d_po3.pdf" class="c_click2" target="_blank">
+                                                    <div class="dot_hover">
+                                                        <h3>라면</h3>
+                                                        <p>'건강하게 라면먹기'라는<br/>주제로 일러스트를 이용해<br/>스토리북을 제작</p>
+                                                        <img class="project" src="images/c3.png" alt="img" title="img">
+                                                    </div>   
+                                                    <img class="ssda menu_over ssda7" src="images/ssda.png" alt="img" title="img">
+                                                    <img class="dot_top_c" src="images/dot.png" alt="img" title="img">
+                                                </a>
+                                            </li>
+                                            
+                                            <li class="c_con3 con_div">
+                                                <a href="pdf/d_po2.pdf" class="c_click3" target="_blank">
+                                                    <img class="dot_bot_c" src="images/dot.png" alt="img" title="img">
+                                                    <img class="ssd menu_over ssd10" src="images/ssd.png" alt="img" title="img">
+                                                    <div class="dot_hover">
+                                                        <img class="project" src="images/c2.png" alt="img" title="img">
+                                                        <h3>pizza poster</h3>
+                                                    <p>피자라는 주제로<br/>일러스트를 이용하여<br/>포스터를 제작함</p>
+                                                    </div>    
+                                                </a>                                            
+                                            </li>
+                                            
+                                            <li class="c_con4 con_div">
+                                                <a href="https://youtu.be/N0FuFvL0lvY" class="c_click4" target="_blank">
+                                                    <div class="dot_hover">
+                                                        <h3>3D-kimsuji</h3>
+                                                        <p>3D을 이용하여<br/>자신의 이름을 소개하는<br/>간단한 영상을 제작</p>
+                                                        <img class="project" src="images/c4.png" alt="img" title="img">
+                                                    </div> 
+                                                    <img class="ssda menu_over ssda8" src="images/ssda.png" alt="img" title="img">
+                                                    <img class="dot_top_c" src="images/dot.png" alt="img" title="img">
+                                                </a>
+                                            </li>
+                                            
+                                            <li class="c_con5 con_div">
+                                                <a href="pdf/d_po5.pdf" class="c_click5" target="_blank">
+                                                    <img class="dot_bot_c" src="images/dot.png" alt="img" title="img">
+                                                    <img class="ssd menu_over ssd11" src="images/ssd.png" alt="img" title="img">
+                                                    <div class="dot_hover">
+                                                        <img class="project" src="images/c5.png" alt="img" title="img">
+                                                        <h3>커피스미스 ucc</h3>
+                                                        <p>커피스미스에서 주체로하는<br/>공모전에 참가하여<br/>우수상을 수상함</p>
+                                                    </div>      
+                                                </a>                                          
+                                            </li>
+                                            
+                                            <li class="c_con6 con_div">
+                                                <a href="https://youtu.be/Yd9u-HkJgTg" class="c_click6" target="_blank">
+                                                    <div class="dot_hover">
+                                                        <h3>카페베네</h3>
+                                                        <p>에펙을 이용하여<br/>카페베네 신메뉴를 소개하는<br/>영상을 제작</p>
+                                                        <img class="project" src="images/c6.png" alt="img" title="img">
+                                                    </div> 
+                                                    <img class="ssda menu_over" id="ssda2" src="images/ssda.png" alt="img" title="img">
+                                                    <img class="dot_top_b" src="images/dot.png" alt="img" title="img">
+                                                </a>
+                                            </li>                                    
+                                            
+                                            <li class="c_con7 con_div">
+                                                <a href="pdf/d_po1.pdf" class="c_click7" target="_blank">
+                                                    <img class="dot_bot_c" src="images/dot.png" alt="img" title="img">
+                                                    <img class="ssd menu_over" id="ssd12" src="images/ssd.png" alt="img" title="img">
+                                                    <div class="dot_hover">
+                                                        <img class="project" src="images/c1.png" alt="img" title="img">
+                                                        <h3>2eyes branding</h3>
+                                                        <p>걸그룹 2eyes를<br/>새로운 컵셉으로<br/>브랜딩을 함</p>
+                                                    </div>     
+                                                </a>                                           
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="child1_5">
+                    <!-- html/css 페이지 -->
+                        <div class="inner">
+                            <div class="wrapper">
+                                <div class="content">
+                                    <h1 class="text4">About</h1>
+                                    <div class="about_div1">
+                                        <div>
+                                            <div class="own">
+                                            <br/>
+                                                <h3>FULL NAME</h3>
+                                                <p>Kim su ji</p>
+                                            <br/>
+                                                <h3>AGE</h3>
+                                                <p>21/1995.10.22</p>
+                                            <br/>
+                                                <h3>DEGREE</h3>
+                                                <P>계원디자인예술대학교</P>
+                                            <br/>
+                                                <h3>HOPE</h3>
+                                                <p>퍼블리셔/스크립터</p>
+                                            </div >
+                                            <div class="two"><img src="images/my_img.png" alt="img" title="img"></div>
+                                            <div class="three">
+                                            <br/>
+                                                <h3>ADDRESS</h3>
+                                                <p>경기도 의왕시 내손동</p>
+                                            <br/>
+                                                <h3>PHONE</h3>
+                                                <P>010.5517.2880</P>
+                                            <br/>
+                                                <h3>EMAIL</h3>
+                                                <p>rlatnwl2880@daum.net</p>
+                                            <br/>
+                                                <h3>WEB</h3>
+                                                <p>http://kimsuji.dothome.co.kr/</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="about_div2">
+                                        <div>
+                                            <p>안녕하세요 저는 <strong>김수지</strong> 입니다. 저의 포트폴리오 사이트에 방문해주셔서감사합니다. <br/>저는 프로그래밍을 전공하고 있습니다. 프로그래밍을 좋아하고 관심이 많아 많이 배우고 싶습니다. <br/>프로그래밍이 힘든 만큼 노력으로 채우겠습니다. <br/>저의 포트폴리오를 자세히 봐주세요.
+
+                                                안녕하세요 저는 <strong>김수지</strong> 입니다. 저의 포트폴리오 사이트에 방문해주셔서감사합니다. 저는 프로그래밍을 전공하고 있습니다. 프로그래밍을 좋아하고 관심이 많아 많이 배우고 싶습니다. 프로그래밍이 힘든 만큼 노력으로 채우겠습니다. <br/>저의 포트폴리오를 자세히 봐주세요.
+                                            </p> 
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+
+                <div id="child1_6">
+                    <!-- Capacity 페이지 -->
+                    <div class="item item5">
+                        <div class="inner">
+                            <div class="wrapper">
+                                <div class="content">
+                                    <h1 class="text5">Capacity</h1>
+                                    <div class="boxes">
+                                        <ul class="top">
+                                            <li>
+                                                <div class="boxes_ele" id="box1"></div>
+                                            </li>
+                                            <li>
+                                                <div class="boxes_ele" id="box2"></div>
+                                            </li>
+                                            <li>
+                                                <div class="boxes_ele" id="box3"></div>
+                                            </li>
+                                            <li>
+                                                <div class="boxes_ele" id="box4"></div>
+                                            </li>
+                                            <li>
+                                                <div class="boxes_ele" id="box5"></div>
+                                            </li>
+                                            <li>
+                                                <div class="boxes_ele" id="box6"></div>
+                                            </li>
+                                            <li>
+                                                <div class="boxes_ele" id="box7"></div>
+                                            </li>
+                                        </ul>
+                                        <ul class="under">
+                                            <li><div class="boxes_ele" id="txt1">html/css</div></li>
+                                            <li><div class="boxes_ele" id="txt2">javascript</div></li>
+                                            <li><div class="boxes_ele" id="txt3">jquery</div></li>
+                                            <li><div class="boxes_ele" id="txt4">java</div></li>
+                                            <li><div class="boxes_ele" id="txt5">css3</div></li>
+                                            <li><div class="boxes_ele" id="txt6">desgin</div></li>
+                                            <li><div class="boxes_ele" id="txt7">planning</div></li>
+                                        </ul>
+                                        <ul class="box_title">
+                                            <li>
+                                                <div class="boxes_ele" id="box_tit1">90%</div>
+                                            </li>
+                                            <li>
+                                                <div class="boxes_ele" id="box_tit2">60%</div>
+                                            </li>
+                                            <li>
+                                                <div class="boxes_ele" id="box_tit3">70%</div>
+                                            </li>
+                                            <li>
+                                                <div class="boxes_ele" id="box_tit4">60%</div>
+                                            </li>
+                                            <li>
+                                                <div class="boxes_ele" id="box_tit5">50%</div>
+                                            </li>
+                                            <li>
+                                                <div class="boxes_ele" id="box_tit6">60%</div>
+                                            </li>
+                                            <li>
+                                                <div class="boxes_ele" id="box_tit7">50%</div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div id="child1_7">
+                    <div class="item item6">
+                        <div class="inner">
+                            <div class="wrapper">
+                                <div class="content">
+                                    <h1 class="text6">Contact us!</h1>
+                                    <div class="contact_wrap">
+                                        <form action="form.php" method="get" class="form">
+                                            <fieldset class="fieldset">
+                                                <legend>visitor</legend>
+                                                        <label for="name">Your Email </label>
+                                                        <input type="text" id="name"  value="Full Name"/>
+                                                        <input type="text" id="userEmail" value="Email Address" title="이메일 아이디 입력"/>
+                                                    
+                                                        <label for="userEmail">Your Name </label>
+                                                        
+                                                        <label for="meno">Your Message </label>
+                                                        
+                                                    <textarea cols="200" rows="20" id="meno" name="meno">Your Message
+                                                    </textarea>
+                                                    
+                                                    <p class="btn">
+                                                        <button type="submit" id="ok" value="보내기">SEND</button>                         
+                                                    </p>
+                                            </fieldset>
+                                        </form> 
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="child1_8">
+                    <div class="item item7">
+                        <div class="inner">
+                            <div class="wrapper">
+                                <div class="content">
+                                    <div class="copy">
+                                        <p class="copy_txt">
+                                            Copyright 2015. kimsuji. all rights reserved.
+                                        </p>    
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--
+        <div class="a_click2_over" id="click_over">
+            <div class="iframe_content">
+            	<ul>
+                	<li>
+                        <div class="close">
+                            <a href="#">close</a>
+		                </div>
+					</li>
+                    <li>
+                    	<div class="po_more">
+                        	<a href="sub/jquery_po2/index.html" target="_blank">포트폴리오 보기</a>
+                        </div>
+                    </li>
+                </ul>
+                <iframe width="100%" height="500px" src="sub/jquery_po2/js/common.js" name="mainframe">
+                </iframe>
+            </div>
+        </div>
+        
+        <div class="a_click3_over" id="click_over">
+            <div class="iframe_content">
+                <ul>
+                    <li>
+                        <div class="close">
+                            <a href="#">close</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="po_more">
+                            <a href="sub/jquery_po3/index.html" target="_blank">포트폴리오 보기</a>
+                        </div>
+                    </li>
+                </ul>
+                <iframe width="100%" height="500px" src="sub/jquery_po3/js/common.js" name="mainframe">
+                </iframe>
+            </div>
+        </div>
+
+        <div class="a_click4_over" id="click_over">
+            <div class="iframe_content">
+                <ul>
+                    <li>
+                        <div class="close">
+                            <a href="#">close</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="po_more">
+                            <a href="sub/jquery_po4/index.html" target="_blank">포트폴리오 보기</a>
+                        </div>
+                    </li>
+                </ul>
+                <iframe width="100%" height="500px" src="sub/jquery_po4/js/common.js" name="mainframe">
+                </iframe>
+            </div>
+        </div>
+
+        <div class="a_click5_over" id="click_over">
+            <div class="iframe_content">
+                <ul>
+                    <li>
+                        <div class="close">
+                            <a href="#">close</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="po_more">
+                            <a href="sub/jquery_po5/index.html" target="_blank">포트폴리오 보기</a>
+                        </div>
+                    </li>
+                </ul>
+                <iframe width="100%" height="500px" src="sub/jquery_po5/js/common.js" name="mainframe">
+                </iframe>
+            </div>
+        </div>
+
+        <div class="a_click6_over" id="click_over">
+            <div class="iframe_content">
+                <ul>
+                    <li>
+                        <div class="close">
+                            <a href="#">close</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="po_more">
+                            <a href="sub/jquery_po6/index.html" target="_blank">포트폴리오 보기</a>
+                        </div>
+                    </li>
+                </ul>
+                <iframe width="100%" height="500px" src="sub/jquery_po6/js/common.js" name="mainframe">
+                </iframe>
+            </div>
+        </div>
+
+        <div class="a_click7_over" id="click_over">
+            <div class="iframe_content">
+                <ul>
+                    <li>
+                        <div class="close">
+                            <a href="#">close</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="po_more">
+                            <a href="sub/jquery_po7/index.html" target="_blank">포트폴리오 보기</a>
+                        </div>
+                    </li>
+                </ul>
+                <iframe width="100%" height="500px" src="sub/jquery_po7/js/common.js" name="mainframe">
+                </iframe>
+            </div>
+        </div>
+        -->        
+
+        
+		<!-- 메뉴선택바 -->
+            
+        
+               
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenLite.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/utils/Draggable.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/plugins/CSSPlugin.min.js"></script>
+     
+
+    </body>
+ </html>
+
+

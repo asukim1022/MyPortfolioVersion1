@@ -1,287 +1,302 @@
 $(document).ready(function() {
 
-/* main 페이지 */
-	$(".main").hover(function(){
-		$(".logo").animate({
-			opacity:1
-		}, 2000, function() {
-		});
-		$("#more").animate({
-			bottom:"90px",
-			opacity:1
-		}, 1000, function() {
-		});
-		$("#more").hover(function(){
-		  $("#more").effect("bounce", { direction:'down', times:20 }, 3000);
-		});
-	});
-	$("header > h1").click(function(){
-		$(".logo").animate({
-			opacity:1
-		}, 2000, function() {
-		});
-		$("#more").animate({
-			bottom:"90px",
-			opacity:1
-		}, 1000, function() {
-		});
-		$("#more").hover(function(){
-		  $("#more").effect("bounce", { direction:'down', times:20 }, 3000);
-		});
-	});
-	
-/* gallery 페이지 */
-	$(".a1").click(function(){
-		$(this).attr("src", "images/a1_3.jpg");
-	});
-	$(".a2").click(function(){
-		$(this).attr("src", "images/a2_2.jpg");
-	});
-	$(".a3").click(function(){
-		$(this).attr("src", "images/a3_3.jpg");
-	});
-	$(".a4").click(function(){
-		$(this).attr("src", "images/a4_2.jpg");
-	});
-	$(".a5").click(function(){
-		$(this).attr("src", "images/a6_2.jpg");
-	});
-	$(".a6").click(function(){
-		$(this).attr("src", "images/a6_3.jpg");
-	});
+        
+            window.addEventListener("load", readyFunc2);
+            function readyFunc2(){
+                Draggable.create(".draggable_div2", {type:"x", edgeResistance:0.64, 
+                bounds:"#container_div3", throwProps:true, onDrag:updateFunc, onDragEnd:endFunc});
+            }
+            function updateFunc(){
+                
+            }
+            var now = 1;
+            function endFunc(){
+                var basic_location = document.getElementById("content_div3")
+                .getBoundingClientRect().left;
+                var parent_location = document.getElementById("content_div3")
+                .offsetParent.getBoundingClientRect().left;
+                var offset_location = document.getElementById("content_div3")
+                .offsetLeft;
+                var root_location = parent_location+offset_location;
+                var relative_location = basic_location - root_location;
+                var abs_location = Math.abs(relative_location);
+                var child_container_width = document.getElementById("child1_1").getBoundingClientRect().width;
+                
+                var ban = child_container_width/2.5;
+                var left_0;
+                if(abs_location <= ban){
+                    content0_animation();
+                    TweenMax.to("#content_div3" , 1, {x:0, y:0, ease:Circ.easeOut});
+                    
+                }else if(abs_location <= ban+child_container_width*1){
+                    content1_animation();
+                    TweenMax.to("#content_div3" , 1, {x:-(child_container_width*1), y:0, ease:Circ.easeOut});
+                
+                }else if(abs_location <= ban+child_container_width*2){
+                    content2_animation();
+                    TweenMax.to("#content_div3" , 1, {x:-(child_container_width*2), y:0, ease:Circ.easeOut});
+                    
+                }else if(abs_location <= ban+child_container_width*3){
+                    content3_animation();
+                    TweenMax.to("#content_div3" , 1, {x:-(child_container_width*3), y:0, ease:Circ.easeOut});
+                    
+                }else if(abs_location <= ban+child_container_width*4){
+                    content4_animation();
+                    TweenMax.to("#content_div3" , 1, {x:-(child_container_width*4), y:0, ease:Circ.easeOut});
+                    
+                }else if(abs_location <= ban+child_container_width*5){
+                    content5_animation();
+                    TweenMax.to("#content_div3" , 1, {x:-(child_container_width*5), y:0, ease:Circ.easeOut});
+                    
+                }else if(abs_location <= ban+child_container_width*6){
+                    content6_animation();
+                    TweenMax.to("#content_div3" , 1, {x:-(child_container_width*6), y:0, ease:Circ.easeOut});
+                    
+                }else if(abs_location <= ban+child_container_width*7){
+                    content7_animation();
+                    TweenMax.to("#content_div3" , 1, {x:-(child_container_width*7), y:0, ease:Circ.easeOut});
+                    
+                }else if(abs_location <= ban+child_container_width*8){
+                    TweenMax.to("#content_div3" , 1, {x:-(child_container_width*8), y:0, ease:Circ.easeOut});
+                    
+                }
 
-/* capability 페이지 */
-	$("#capability_cilck").click(function(){
-		$(".as").effect("bounce", { direction:'down', times:20 }, 3000);
-	});
-	$(".acc1").click(function(){
-		$(".acc1").effect("bounce", { direction:'down', times:10 }, 3000);
-	});
-	$(".acc2").click(function(){
-		$(".acc2").effect("bounce", { direction:'top', times:4 }, 3000);
-	});
-	$(".acc3").click(function(){
-		$(".acc3").effect("bounce", { direction:'top', times:15 }, 3000);
-	});
-	$(".acc4").click(function(){
-		$(".acc4").effect("bounce", { direction:'down', times:10 }, 3000);
-	});
-	$(".acc5").click(function(){
-		$(".acc5").effect("bounce", { direction:'down', times:20 }, 3000);
-	});
+            }
+            $(".slideSelectors > div").css("cursor", "pointer");
+            $(".slideSelectors > div").on("click", function(e){
+                e.preventDefault();
 
-/* portfolio 페이지 */
-	var current = 0; 
-    var currentB = 0;
-    var targetB;
-	$(".itemList .wrapBox > ul >li").click(function(){
-		current = $(this).index();
-	  
-		imageSet();
-		thumbSet();
-	});
-	function imageSet() {
-		$(".itemViewLeft .itemBig > div").each(function(i){
-			if(i == current){
-				$(this).fadeIn(500);         
-         	}else{
-            	$(this).hide();      
-         	};
-		});   
-	};
-	function thumbSet(){
-		$(".itemList .wrapBox > ul > li").each(function(i){
-			if(i == current){
-				$(this)	.addClass("on");
-			}else{
-				$(this).removeClass("on");
-			};
-        });
-	};
-	imageSet();
-	
-/* account 페이지 */
-	$(".account_txt1").hover(function(){
-		$(".account_txt1").css({
-			"font-size":"26px", "text-wight":"bold"
-		}, 800, function() {
-		});
-	});	
-	$(".account_txt2").hover(function(){
-		$(".account_txt2").css({
-			"font-size":"26px", "text-wight":"bold"
-		}, 800, function() {
-		});
-	});	
-	$(".account_txt3").hover(function(){
-		$(".account_txt3").css({
-			"font-size":"26px", "text-wight":"bold"
-		}, 800, function() {
-		});
-	});	
-	
+                $(".slideSelectors > div").removeClass("selected");
+                $(this).addClass("selected");
 
-	var targetH = 900;
-		$("header > h1").click(function(){
-			$("body, html").stop().animate({scrollTop :1}, 1000 ,"easeInOutQuint");
-		});
-		$(".prtfolio4").click(function(){
-			$("body, html").stop().animate({scrollTop :1}, 1000 ,"easeInOutQuint");
-		});
-		$("header > nav > ul >li:eq(0)").click(function(){
-			$("body, html").stop().animate({scrollTop : targetH *1}, 1000 ,"easeInOutQuint");
-		});
-		$("#more").click(function(){
-			$("body, html").stop().animate({scrollTop : targetH *1}, 1000 ,"easeInOutQuint");
-		});
-		$("header > nav > ul >li:eq(1)").click(function(){
-			$("body, html").stop().animate({scrollTop : targetH *2+-25}, 1000 ,"easeInOutQuint");
-		});
-		$("header > nav > ul >li:eq(2)").click(function(){
-			$("body, html").stop().animate({scrollTop : targetH *3+-45}, 1000,"easeInOutQuint");
-		});
-		$("header > nav > ul >li:eq(3)").click(function(){
-			$("body, html").stop().animate({scrollTop : targetH *4+-110}, 1000,"easeInOutQuint");
-		});
-		$("header > nav > ul >li:eq(4)").click(function(){
-			$("body, html").stop().animate({scrollTop : targetH *5+-500}, 1000,"easeInOutQuint");
-		});
-		$("header > nav > ul >li:eq(5)").click(function(){
-			$("body, html").stop().animate({scrollTop : targetH *6+-450}, 1000,"easeInOutQuint");
-		});
-		$(window).scroll(function () { 
-			console.log($(window).scrollTop());
-		});
+                var child_container_width = document.getElementById("child1_1").getBoundingClientRect().width;
+                switch ($(this).index()){
 
-	$(window).scroll(function(){
-		if($(document).scrollTop() > 0 && $(document).scrollTop() < 836){
-			$("header > nav > ul >li:eq(0) > a ").css({"font-weight":"normal", "text-decoration":"none", "color":"#30c891"})
-			$("header > nav > ul >li:eq(1) > a ").css({"font-weight":"normal", "text-decoration":"none", "color":"#30c891"});
-			$("header > nav > ul >li:eq(2) > a ").css({"font-weight":"normal", "text-decoration":"none", "color":"#30c891"});
-			$("header > nav > ul >li:eq(3) > a ").css({"font-weight":"normal", "text-decoration":"none", "color":"#30c891"});
-			$("header > nav > ul >li:eq(4) > a ").css({"font-weight":"normal", "text-decoration":"none", "color":"#30c891"});
-			$("header > nav > ul >li:eq(5) > a ").css({"font-weight":"normal", "text-decoration":"none", "color":"#30c891"});
-			
-		}else if($(document).scrollTop() > 836 && $(document).scrollTop() < 1713){
-		    $("header").show();
-		  	$("header > nav > ul >li:eq(0) > a ").css({"font-weight":"bold", "text-decoration":"underline", "color":"#fff"});
-			$("header > nav > ul >li:eq(1) > a ").css({"font-weight":"normal", "text-decoration":"none", "color":"#30c891"});
-			$("header > nav > ul >li:eq(2) > a ").css({"font-weight":"normal", "text-decoration":"none", "color":"#30c891"});
-			$("header > nav > ul >li:eq(3) > a ").css({"font-weight":"normal", "text-decoration":"none", "color":"#30c891"});
-			$("header > nav > ul >li:eq(4) > a ").css({"font-weight":"normal", "text-decoration":"none", "color":"#30c891"});
-			$("header > nav > ul >li:eq(5) > a ").css({"font-weight":"normal", "text-decoration":"none", "color":"#30c891"});
-			
-			$("#intro").animate({
-				bottom:"60px",
-				opacity:1
-			}, 800, function() {
-			});
-			$("#intro_img").animate({
-				left:"1010px",
-				opacity:1
-			}, 1700, function() {
-			});
-			$("#intro_txt").animate({
-				right:"430px",
-				opacity:1
-			}, 1500, function() {
-			});
-		
-		}else if($(document).scrollTop() > 1713 && $(document).scrollTop() < 2604){
-			
-		    $("header").show();
-			$("header > nav > ul >li:eq(0) > a ").css({"font-weight":"normal", "text-decoration":"none", "color":"#30c891"});
-			$("header > nav > ul >li:eq(1) > a ").css({"font-weight":"bold", "text-decoration":"underline", "color":"#fff"});
-			$("header > nav > ul >li:eq(2) > a ").css({"font-weight":"normal", "text-decoration":"none", "color":"#30c891"});
-			$("header > nav > ul >li:eq(3) > a ").css({"font-weight":"normal", "text-decoration":"none", "color":"#30c891"});
-			$("header > nav > ul >li:eq(4) > a ").css({"font-weight":"normal", "text-decoration":"none", "color":"#30c891"});
-			$("header > nav > ul >li:eq(5) > a ").css({"font-weight":"normal", "text-decoration":"none", "color":"#30c891"});
+                    case 0:
+                        content0_animation();
+                    case 1:
+                        content1_animation();   
+                    case 2:
+                        content2_animation(); 
+                    case 3:
+                        content3_animation();                         
+                    case 4:
+                        content4_animation();                         
+                    case 5:
+                        content5_animation();                         
+                    case 6:
+                        content6_animation();                         
+                    case 7:
+                        content7_animation();                         
+                }
+                TweenMax.to("#content_div3" , 1, {x:-(child_container_width*$(this).index()), y:0, ease:Circ.easeOut});
+            })
 
-			$("#gallery").animate({
-				bottom:"40px",
-				opacity:1
-			}, 300, function() {
-			});
-			$("#gallery_ul").animate({
-				bottom:"120px",
-				opacity:1
-			}, 800, function() {
-			});
-		
-		}else if($(document).scrollTop() > 2604 && $(document).scrollTop() < 3488){
-			$("header").show();
-			$("header > nav > ul >li:eq(0) > a ").css({"font-weight":"normal", "text-decoration":"none", "color":"#30c891"});
-			$("header > nav > ul >li:eq(1) > a ").css({"font-weight":"normal", "text-decoration":"none", "color":"#30c891"});
-			$("header > nav > ul >li:eq(2) > a ").css({"font-weight":"bold", "text-decoration":"underline", "color":"#fff"});
-			$("header > nav > ul >li:eq(3) > a ").css({"font-weight":"normal", "text-decoration":"none", "color":"#30c891"});
-			$("header > nav > ul >li:eq(4) > a ").css({"font-weight":"normal", "text-decoration":"none", "color":"#30c891"});
-			$("header > nav > ul >li:eq(5) > a ").css({"font-weight":"normal", "text-decoration":"none", "color":"#30c891"});
-			
-			$(".txt").animate({
-				bottom:"80px",
-				opacity:1
-			}, 300, function() {
-			});
-			$(".as").animate({
-				bottom:"140px",
-				opacity:1
-			}, 800, function() {
-			});
+            function content0_animation(){
+                $('.content_div_d').delay(1000).animate({
+                    opacity: '1'
+                })
+                $('.dot_bot_d').delay(1100).animate({
+                    opacity: '1',
+                    bottom: '10px'
+                })
+                $('.dot_top_d').delay(1100).animate({
+                    opacity: '1',
+                    top: '10px'
+                })
+                $('.text0').delay(700).animate({
+                    opacity: '1',
+                    top: '65px'
+                })
+                $('.line_d').stop().delay(900).animate({
+                    width: '100%'
+                },1000)
+                $('.menu_click2').css
+            };
+            
+            function content1_animation(){
+                $('.content_div_a').delay(1000).animate({
+                    opacity: '1'
+                })
+                $('.dot_bot_a').delay(1100).animate({
+                    opacity: '1',
+                    bottom: '10px'
+                })
+                $('.dot_top_a').delay(1100).animate({
+                    opacity: '1',
+                    top: '10px'
+                })
+                $('.text1').delay(700).animate({
+                    opacity: '1',
+                    top: '65px'
+                })
+                $('.line_a').stop().delay(900).animate({
+                    width: '100%'
+                },1000)
+            };
+            function content2_animation(){
+                $('.content_div_b').delay(1000).animate({
+                    opacity: '1'
+                })
+                $('.dot_bot_b').delay(1100).animate({
+                    opacity: '1',
+                    bottom: '10px'
+                })
+                $('.dot_top_b').delay(1100).animate({
+                    opacity: '1',
+                    top: '10px'
+                })
+                $('.text2').delay(700).animate({
+                    opacity: '1',
+                    top: '65px'
+                })
+                $('.line_b').stop().delay(900).animate({
+                    width: '100%'
+                },1000)
+            };
 
-		}else if($(document).scrollTop() > 3488 && $(document).scrollTop() < 3989){
-			$("header").show();
-			$("header > nav > ul >li:eq(0) > a ").css({"font-weight":"normal", "text-decoration":"none", "color":"#30c891"});
-			$("header > nav > ul >li:eq(1) > a ").css({"font-weight":"normal", "text-decoration":"none", "color":"#30c891"});
-			$("header > nav > ul >li:eq(2) > a ").css({"font-weight":"normal", "text-decoration":"none", "color":"#30c891"});
-			$("header > nav > ul >li:eq(3) > a ").css({"font-weight":"bold", "text-decoration":"underline", "color":"#fff"});
-			$("header > nav > ul >li:eq(4) > a ").css({"font-weight":"normal", "text-decoration":"none", "color":"#30c891"});
-			$("header > nav > ul >li:eq(5) > a ").css({"font-weight":"normal", "text-decoration":"none", "color":"#30c891"});
-			
-			$(".account_wrap").animate({
-				bottom:"50px",
-				opacity:1
-			}, 800, function() {
-			});
-			
-		}else if($(document).scrollTop() > 3989 && $(document).scrollTop() < 4880){
-			 $("header").show();
-			 $("header > nav > ul >li:eq(0) > a ").css({"font-weight":"normal", "text-decoration":"none", "color":"#30c891"});
-			 $("header > nav > ul >li:eq(1) > a ").css({"font-weight":"normal", "text-decoration":"none", "color":"#30c891"});
-			 $("header > nav > ul >li:eq(2) > a ").css({"font-weight":"normal", "text-decoration":"none", "color":"#30c891"});
-			 $("header > nav > ul >li:eq(3) > a ").css({"font-weight":"normal", "text-decoration":"none", "color":"#30c891"});
-			 $("header > nav > ul >li:eq(4) > a ").css({"font-weight":"bold", "text-decoration":"underline", "color":"#fff"});
-			 $("header > nav > ul >li:eq(5) > a ").css({"font-weight":"normal", "text-decoration":"none", "color":"#30c891"});
-			 
-			 $(".prtfolio h2, .prtfolio p").animate({
-				bottom:"120px",
-				opacity:1
-			}, 300, function() {
-			});
-			$(".itemViewLeft").animate({
-				bottom:"120px",
-				opacity:1
-			}, 800, function() {
-			});
-			 
-		}else if($(document).scrollTop() > 4880 && $(document).scrollTop() < 5180){
-			$("header").show();
-			 $("header > nav > ul >li:eq(0) > a ").css({"font-weight":"normal", "text-decoration":"none", "color":"#30c891"});
-			 $("header > nav > ul >li:eq(1) > a ").css({"font-weight":"normal", "text-decoration":"none", "color":"#30c891"});
-			 $("header > nav > ul >li:eq(2) > a ").css({"font-weight":"normal", "text-decoration":"none", "color":"#30c891"});
-			 $("header > nav > ul >li:eq(3) > a ").css({"font-weight":"normal", "text-decoration":"none", "color":"#30c891"});
-			 $("header > nav > ul >li:eq(4) > a ").css({"font-weight":"normal", "text-decoration":"none", "color":"#30c891"});
-			 $("header > nav > ul >li:eq(5) > a ").css({"font-weight":"bold", "text-decoration":"underline", "color":"#fff"});
-			 
-			 $(".contact_txt").animate({
-				bottom:"80px",
-				opacity:1
-			}, 300, function() {
-			});
-			$(".form").animate({
-				bottom:"80px",
-				opacity:1
-			}, 800, function() {
-			});
-		}
-	});
+            function content3_animation(){
+                $('.content_div_c').delay(1000).animate({
+                    opacity: '1'
+                })
+                $('.dot_bot_c').delay(1100).animate({
+                    opacity: '1',
+                    bottom: '10px'
+                })
+                $('.dot_top_c').delay(1100).animate({
+                    opacity: '1',
+                    top: '10px'
+                })
+                $('.text3').delay(700).animate({
+                    opacity: '1',
+                    top: '65px'
+                })
+                $('.line_c').stop().delay(900).animate({
+                    width: '100%'
+                },1000)
+            };
+
+            function content4_animation(){
+                $('.about_div1').delay(900).animate({
+                    opacity: '1'
+                })
+                $('.about_div2').delay(1000).animate({
+                    opacity: '1'
+                })
+                $('.text4').delay(700).animate({
+                    opacity: '1',
+                    top: '65px'
+                })
+            };
+
+            function content5_animation(){
+                $('.text5').delay(700).animate({
+                    opacity: '1',
+                    top: '65px'
+                })
+
+                 /* 능력 박스 */
+                $('#box1').delay(1000).animate({
+                    height: '380px'
+                })
+                $('#box2').delay(1000).animate({
+                    height: '230px'
+                })
+                $('#box3').delay(1000).animate({
+                    height: '297px'
+                })
+                $('#box4').delay(1000).animate({
+                    height: '230px'
+                })
+                $('#box5').delay(1000).animate({
+                    height: '140px'
+                })
+                $('#box6').delay(1000).animate({
+                    height: '200px'
+                })
+                $('#box7').delay(1000).animate({
+                    height: '140px'
+                })
+
+                //능력 텍스트
+                $('#txt1, #txt2, #txt3, #txt4, #txt5, #txt6, #txt7').delay(900).animate({
+                    bottom: '20px',
+                    opacity: '1'
+                })
+
+                //능력 퍼센트
+                $('.box_title').delay(1300).animate({
+                    top: '-30px',
+                    opacity: '1'
+                })
+            };
+
+            function content6_animation(){
+                $('.form').delay(1000).animate({
+                    opacity: '1'
+                })
+
+                $('.text6').delay(700).animate({
+                    opacity: '1',
+                    top: '65px'
+                })
+            };
+
+            function content7_animation(){
+                $('.copy_txt').delay(800).animate({
+                    opacity: '1'
+                })
+            };
+
+
+            $("#port_a > li, #port_b > li, #port_c > li").on("mouseover", function(){
+                $(this).find(".menu_over").stop().animate({opacity:1},300);
+            });
+
+            $("#port_a > li, #port_b > li, #port_c > li").on("mouseout", function(){
+                $(this).find(".menu_over").stop().animate({opacity:0},300);
+            });
+
+            $(".close").click(function(){
+                $(".a_click2_over").stop().animate({"top": "100%"}, 500);
+                $(".a_click3_over").stop().animate({"top": "100%"}, 500);
+                $(".a_click4_over").stop().animate({"top": "100%"}, 500);
+                $(".a_click5_over").stop().animate({"top": "100%"}, 500);
+                $(".a_click6_over").stop().animate({"top": "100%"}, 500);
+                $(".a_click7_over").stop().animate({"top": "100%"}, 500);
+            });
+
+            $(".menu_click2").click(function(){
+                console.log("menu2");
+            }); 
+
+            $(".slideSelectors > div").on("click", function(){
+                console.log("click");
+            });
+
+            
+
+
+            $(".a_click2").click(function(){
+                $(".a_click2_over").stop().animate({"top": 0}, 500);
+            });
+            $(".a_click3").click(function(){
+                $(".a_click3_over").stop().animate({"top": 0}, 500);
+            });
+            $(".a_click4").click(function(){
+                $(".a_click4_over").stop().animate({"top": 0}, 500);
+            });
+            $(".a_click5").click(function(){
+                $(".a_click5_over").stop().animate({"top": 0}, 500);
+            });
+            $(".a_click6").click(function(){
+                $(".a_click6_over").stop().animate({"top": 0}, 500);
+            });
+            $(".a_click7").click(function(){
+                $(".a_click7_over").stop().animate({"top": 0}, 500);
+            });
+
+
+            content0_animation();
+
 });
